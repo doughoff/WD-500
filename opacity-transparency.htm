@@ -1,0 +1,64 @@
+<!doctype html>
+<html class="no-js" lang="">
+<!-- https://jsfiddle.net/doughoff/wgq2tsbp/ -->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    <style>
+    .box {
+        display: table-cell;
+    }
+    
+    .image-size {
+        width: 493px;
+        height: 335px;
+    }
+    
+    .opacity-children {
+        opacity: 0.4;
+        background-color: rgb(255, 255, 255);
+    }
+    
+    .opacity-element {
+        background: rgba(255, 255, 255, 0.6);
+    }
+    
+    body {
+        background-color: #99CCFF;
+    }
+    
+    .dog-background {
+        background-image: url(http://img.webmd.com/dtmcms/live/webmd/consumer_assets/site_images/articles/health_tools/dog_breed_health_issues_slideshow/getty_rm_photo_of_boxer_dog_looking_at_camera.jpg);
+    }
+    </style>
+</head>
+
+<body>
+    <div class="opacity-children box image-size">
+        <p>
+            Div and all children</p>
+        <p>
+            <img alt="dog" src="http://img.webmd.com/dtmcms/live/webmd/consumer_assets/site_images/articles/health_tools/dog_breed_health_issues_slideshow/getty_rm_photo_of_boxer_dog_looking_at_camera.jpg" /></p>
+    </div>
+    <div class="opacity-element box image-size">
+        <p>
+            Element only</p>
+        <div class="dog-background image-size">
+            <p class="opacity-element">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
