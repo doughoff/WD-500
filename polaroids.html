@@ -1,0 +1,96 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Polaroids</title>
+
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    <style>
+        body {
+            margin: 30px;
+            background-color: #E9E9E9;
+        }
+        
+        .restrict-size-to-parent {
+            width: inherit;
+        }
+        
+        .caption {
+            font-size: .8em;
+            font-family: Courier;
+        }
+        
+        .polaroid {
+            width: 300px;
+            padding: 10px 10px 20px 10px;
+            border: 1px solid #BFBFBF;
+            margin-right: -80px;
+            background-color: white;
+            box-shadow: 2px 2px 3px #aaaaaa;
+            -webkit-transition: all .7s ease .4s;
+            -moz-transition: all .7s ease .4s;
+            -o-transition: all .7s ease .4s;
+            -ms-transition: all .7s ease .4s;
+            transition: all .7s ease .4s;
+        }
+        
+        .polaroid:hover {
+            -ms-transform: scale(1.2);
+            -webkit-transform: scale(1.2);
+            -moz-transform: scale(1.1);
+            position: relative;
+            z-index: 5;
+            box-shadow: 5px 5px 30px #aaaaaa;
+        }
+        
+        .rotate-right {
+            float: left;
+            -ms-transform: rotate(7deg);
+            -moz-transform: rotate(7deg);
+            -webkit-transform: rotate(7deg);
+            -o-transform: rotate(7deg);
+            transform: rotate(7deg);
+        }
+        
+        .rotate-left {
+            float: left;
+            -ms-transform: rotate(-8deg) translateY(70px);
+            -moz-transform: rotate(-8deg) translateY(70px);
+            -webkit-transform: rotate(-8deg) translateY(70px);
+            -o-transform: rotate(-8deg) translateY(70px);
+            transform: rotate(-8deg) translateY(70px);
+        }
+    </style>
+</head>
+
+<body>
+    <figure class="polaroid rotate-right">
+        <img src="https://www.petfinder.com/wp-content/uploads/2012/11/106558340-adoptable-deaf-dog-photo-tips-632x475.jpg" class="restrict-size-to-parent" />
+        <figcaption class="caption">This is my dog ChiChi.</figcaption>
+    </figure>
+    <figure class="polaroid rotate-left">
+        <img src="http://www.funchap.com/wp-content/uploads/2014/05/Harrier-dog.jpg" class="restrict-size-to-parent" />
+        <figcaption class="caption">This is my dog Snuffy. He will chase cars all day and still play fetch with me until I get tired.</figcaption>
+    </figure>
+    <figure class="polaroid rotate-right">
+        <img src="http://a57.foxnews.com/global.fncstatic.com/static/managed/img/fn2/876/493/Pig%20the%20Dog1.jpg?ve=1&tl=1" class="restrict-size-to-parent" />
+        <figcaption class="caption">This is somebody else's dog.</figcaption>
+    </figure>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

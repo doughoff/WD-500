@@ -1,0 +1,74 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title></title>
+
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <a id="watch" href="#" data-role="button" data-inline="true" data-icon="home">Detect location</a>
+    <data id="message"></data>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        var watchID;
+        $("#watch").click(function() {
+            if (Modernizr.geolocation) {
+                console.log("Geolocation is active.");
+                var nav = window.navigator;
+                if (nav != null) {
+                    var geoloc = nav.geolocation;
+                    watchID = geoloc.watchPosition(successCallback, errorCallback);
+                }
+            } else {
+                $("#message").text("You'll need to enter your address manually.");
+            }
+        });
+
+        function successCallback(position) {
+
+            var latitude = position.coords.latitude;
+            var longitude = position.coords.longitude;
+
+            $('#message').text("There you are at " + latitude + " " + longitude);
+            $('#message').append(' <a id="watch" target="_blank" href="http://maps.google.com/maps?ix=acb&q=' + latitude + '+' + longitude + '&um=1&ie=UTF-8&hl=en&sa=N&tab=wl">Show on Google Maps</a>');
+        }
+
+        function errorCallback(error) {
+            switch (error.code) {
+                case error.PERMISSION_DENIED:
+                    alert("User did not share geolocation data");
+                    break;
+                case error.POSITION_UNAVAILABLE:
+                    alert("Could not detect current position");
+                    break;
+                case error.TIMEOUT:
+                    alert("Time out");
+                    break;
+                default:
+                    alert("Unknown error");
+                    break;
+            }
+        }
+    </script>
+</body>
+
+</html>
