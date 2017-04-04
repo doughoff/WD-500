@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Text Shadows with Supports</title>
+    <style>
+        h1 {
+            font-size: 5em;
+            color: gray;
+        }
+        
+        @supports (text-shadow: 4px 4px 8px hsla(0, 0%, 50%, 1)) {
+            h1 {
+                color: floralwhite;
+                text-shadow: 4px 4px 8px hsla(0, 0%, 50%, 1);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Text Shadows with Supports</h1>
+</body>
+
+</html>
