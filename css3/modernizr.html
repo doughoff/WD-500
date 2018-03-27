@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Modernizr</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+    <style>
+        .mobile,
+        .desktop {
+            display: none;
+        }
+
+        .touch .mobile,
+        .no-touch .desktop {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Modernizr example</h1>
+    <p class="mobile">You have touch enabled!</p>
+    <p class="desktop">You don't have touch enabled.</p>
+</body>
+
+</html>
