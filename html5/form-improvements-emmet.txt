@@ -1,0 +1,12 @@
+
+form:post>div>label[for=name]+input[name=name id=name tabindex=1]
+
+div>h4{Radio Button Choice}+label[for=radio-choice-1]{Choice1}+input:radio[name=radio-choice-1 tabindex=2 value=choice-1]+label[for=radio-choice-2]{Choice2}+input:radio[name=radio-choice-2 tabindex=3 value=choice-2]
+
+div>label[for=select-choice]{Select Dropdown Choice}+select[name=select-choice id=select-choice]>option[value=Choice$]{Choice $}*3
+
+div>label[for=textarea]{Textarea:}+textarea[name=textarea id=textarea cols=40 row=8 ]
+
+div>label[for=checkbox]{Checkbox:}+input:checkbox[name=checkbox id=checkbox]
+
+div>input:submit[value=Submit]
